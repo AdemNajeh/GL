@@ -9,7 +9,7 @@
 int main(void)
 {
     double a = 1.0, b = 2.0, c = 3.0;
-    double delta;
+    double delta ;
     unsigned char nb_solutions;
 
     delta = b*b - 4.0 * a *c;
