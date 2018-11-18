@@ -18,7 +18,7 @@ int main(void)
    int b=0;
    int S4=0;
 
-while (S1<9876)
+while (3*n<9876)
 
   {
       S1 = S1 + 3 * n;
@@ -43,7 +43,5 @@ while (S1<9876)
            Multiple=Multiple+1;
         
    }
-
-   int debug=0;
    return 0;
 } 
