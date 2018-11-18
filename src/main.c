@@ -25,4 +25,5 @@ int main(void)
             
                 points=points-2;
     }
+  return 0;  
 }
