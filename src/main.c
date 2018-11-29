@@ -1,35 +1,45 @@
-//  Copyright (c) 2018 Antoine Tran Tan
-//
-
 #include "my_header.h"
+#include "TP_lib_suite.h"
 
-int main(void)
+
+int main (void)
 {
-	unsigned char win[6] { 1,2,9,45,65,78 } ;
-	unsigned char joueur[6] {2,6,4,56,89,65} ;
-	int i,W,points;
+	unsigned char combinaison_w[6];
+	unsigned char combinaison_p[6] = {10,12,14,93,2,70};
+	unsigned char val_exactes = 0;
+	unsigned char nb_win = 0;
+	unsigned char i,b,c;
 
 
-    for (i=0;i<6;i++)
-     {
-         for (W=0;W<6;W++)
-        {
-            if(win[i] == joueur[W])
-            {
-                points++;
-                
-            }
-        }
-        
-     }
-		
-	
-	
-	
-	
-	
-	
-	
-	
-    return 0;
+	for (c=0; c<100; c++)
+	{
+		initialiserTirage();
+
+		for (b=0; b<6; b++)
+		{
+			combinaison_w[b] = tirerNumero();
+		}
+
+		for (i=0; i<6; i++)
+		{
+			for (b=0; b<6; b++)
+			{
+				if(combinaison_w[i] == combinaison_p[b])
+				{
+					val_exactes++;
+				}
+			}
+
+		}
+
+		if(nb_win < val_exactes)
+		{
+			nb_win = val_exactes;
+		}
+
+		val_exactes = 0;
+	}
+
+	return 0;
 }
+
