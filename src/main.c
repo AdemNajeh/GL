@@ -76,5 +76,4 @@ void main(void)
          mirror[11-n2]=mirror[n2];
      }
     
-int debug=2;    
 }
